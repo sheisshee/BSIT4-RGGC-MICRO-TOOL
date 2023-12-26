@@ -49,6 +49,7 @@ const flexClass = computed(() => {
   <div class="container py-5" style="height: 100vh;">
     <div class="row">
       <div class="col-md-4">
+        <!-- Flexbox Card -->
         <div class="card mt-3" style="width: 18rem;">
           <a href="javascript:void(0)" class="text-decoration-none">
             <div class="card-body">
@@ -58,8 +59,9 @@ const flexClass = computed(() => {
           </a>
         </div>
       </div>
-       <!-- Shopping List Card -->
-       <div class="col-md-8">
+
+      <div class="col-md-8">
+        <!-- Shopping List Card -->
         <div class="card mt-3" style="width: 18rem;">
           <a href="javascript:void(0)" class="text-decoration-none">
             <div class="card-body">
@@ -68,7 +70,17 @@ const flexClass = computed(() => {
             </div>
           </a>
         </div>
-      <div class="col-md-8">
+
+        <!-- Flexbox Form and Display -->
+        <div class="col-md-8">
+        <div class="form-group">
+          <label>Child Count:</label>
+          <input type="number" min="1" v-model="childCount" class="form-control">
+        </div>
+
+        </div>
+
+        <!-- Shopping List Form and Display -->
         <div class="form-group">
           <label>Child Count:</label>
           <input type="number" min="1" v-model="childCount" class="form-control">
@@ -76,6 +88,7 @@ const flexClass = computed(() => {
         <div class="form-group">
           <label>Flex Direction:</label>
           <select class="form-select" v-model="flexDirection">
+            <!-- ... (existing Flexbox code) ... -->
             <option value="">-- Please select --</option>
             <option value="flex-row">row</option>
             <option value="flex-row-reverse">row-reverse</option>
@@ -139,7 +152,22 @@ const flexClass = computed(() => {
           </div>
         </div>
       </div>
+
+        <div class="mt-5">
+          <div
+            style="width: 100%; height: 400px;"
+            class="bg-primary bg-opacity-10 d-flex border border-4 border-warning"
+            :class="flexClass"
+          >
+            <div v-for="child in childCount" :key="child" class="p-5 bg-primary text-center d-flex align-items-center justify-content-center fs-1 text-white border border-2 border-dark">
+              {{ child }}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="col-md-8 mt-5">
+        <div class="col-md-8 mt-5">
         <div class="form-group">
           <label>Item:</label>
           <input type="text" v-model="newItem" class="form-control" @keydown.enter.prevent="addItem">
@@ -171,5 +199,5 @@ const flexClass = computed(() => {
       </div>
     </div>
   </div>
-  </div>
 </template>
+
