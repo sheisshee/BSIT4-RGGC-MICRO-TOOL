@@ -33,6 +33,20 @@ const flexClass = computed(() => {
                     </a>
                 </div>
             </div>
+         <div class="container py-5" style="height: 100vh;">
+        <div class="row">
+        <div class="col-md-4">
+        <div class="card mt-3" style="width: 18rem;">
+          <a href="javascript:void(0)" class="text-decoration-none">
+            <div class="card-body">
+              <h5 class="card-title">Shopping List</h5>
+              <p class="card-text">Manage your shopping items.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
             <div class="col-md-8">
                 <div class="form-group">
                     <label>Child Count:</label>
@@ -104,5 +118,7 @@ const flexClass = computed(() => {
             </div>
         </div>
     </div>
+</div>
+</div>
 </template>
 
