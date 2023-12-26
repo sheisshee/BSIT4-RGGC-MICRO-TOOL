@@ -162,7 +162,7 @@ onMounted(() => {
             <a href="javascript:void(0)" class="text-decoration-none">
               <div class="card-body">
                 <h5 class="card-title">Grid Layout</h5>
-                <p class="card-text">Create a grid layout.</p>
+                <p class="card-text">Create custom grid layouts.</p>
               </div>
             </a>
           </div>
